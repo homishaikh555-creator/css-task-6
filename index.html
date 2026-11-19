@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Document</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><span>CSS SELECTORS</span><h1>CSS Combinators</h1><p>Understand how HTML elements relate to each other.</p></header>
+<main>
+<section class="panel"><h2>What is a combinator?</h2><p>A CSS combinator joins selectors and describes the relationship between elements in the HTML document. It helps select elements by their position in the page structure.</p></section>
+
+<section class="panel"><h2>1. Descendant combinator — space</h2><p><code>.box p</code> selects every paragraph anywhere inside <code>.box</code>, including nested paragraphs.</p>
+<div class="demo descendant"><div class="box"><p>Direct paragraph: selected</p><div class="nested"><p>Nested paragraph: also selected</p></div></div><p>Outside paragraph: not selected</p></div>
+<pre>.box p { color: green; }</pre></section>
+
+<section class="panel"><h2>2. Child combinator — &gt;</h2><p><code>.box &gt; p</code> selects only paragraphs that are direct children of <code>.box</code>.</p>
+<div class="demo child"><div class="box"><p>Direct paragraph: selected</p><div class="nested"><p>Nested paragraph: not selected</p></div></div></div>
+<pre>.box > p { color: green; }</pre></section>
+
+<section class="panel"><h2>3. Adjacent sibling combinator — +</h2><p><code>h3 + p</code> selects the first paragraph immediately after an h3, when both share the same parent.</p>
+<div class="demo adjacent"><div class="box"><h3>Heading</h3><p>Immediately following paragraph: selected</p><p>Next paragraph: not selected</p></div></div>
+<pre>h3 + p { color: green; }</pre></section>
+
+<section class="panel"><h2>4. General sibling combinator — ~</h2><p><code>h3 ~ p</code> selects all paragraphs after an h3 that share the same parent. They do not need to be next to the heading.</p>
+<div class="demo general"><div class="box"><h3>Heading</h3><p>First following paragraph: selected</p><div class="note">Another element in between</div><p>Later paragraph: also selected</p></div></div>
+<pre>h3 ~ p { color: green; }</pre></section>
+
+<section class="panel"><h2>Quick comparison</h2><div class="table-wrap"><table><tr><th>Combinator</th><th>Symbol</th><th>Meaning</th></tr><tr><td>Descendant</td><td>space</td><td>Any matching element inside</td></tr><tr><td>Child</td><td>&gt;</td><td>Direct children only</td></tr><tr><td>Adjacent sibling</td><td>+</td><td>Immediately next matching sibling</td></tr><tr><td>General sibling</td><td>~</td><td>All later matching siblings</td></tr></table></div></section>
+<section class="panel"><h2>Conclusion</h2><p>Use a space for descendants, <code>&gt;</code> for direct children, <code>+</code> for the immediately following sibling, and <code>~</code> for all following matching siblings.</p></section>
+</main><footer>CSS Combinators — Practice Assignment</footer>
+</body></html>

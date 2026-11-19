@@ -1,0 +1,28 @@
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.65 Arial,sans-serif;background:#f2f6fa;color:#263449}
+header{padding:55px 20px;text-align:center;color:white;background:linear-gradient(130deg,#14243b,#24627a)}
+header span{font-size:12px;letter-spacing:3px;color:#8ee3d0;font-weight:bold}
+header h1{font-size:clamp(32px,5vw,52px);margin:8px 0}
+header p{margin:0;color:#e0edf2}
+main{width:min(900px,92%);margin:30px auto}
+.panel{background:white;border:1px solid #dfe7ef;border-radius:12px;padding:24px;margin-bottom:20px;box-shadow:0 4px 18px #20354b0d}
+h2{margin-top:0;color:#173e58}
+code{background:#edf3f7;padding:2px 6px;border-radius:4px;color:#b34c18}
+.demo{background:#f7fafc;border:1px dashed #aabcca;border-radius:8px;padding:16px;margin-top:16px}
+.box{border:1px solid #91a7b8;border-radius:6px;background:white;padding:12px}
+.box p{background:#eaf0f5;padding:8px;margin:7px 0;border-radius:4px}
+.nested{margin:8px 0 0 20px;padding:8px;border-left:3px solid #b9cbd8;background:#f4f7fa}
+.demo>p{background:#fff0e7;padding:8px}
+.descendant .box p{background:#d8f5e9;outline:2px solid #269c73}
+.child .box>p{background:#d8f5e9;outline:2px solid #269c73}
+.box h3{margin:0 0 8px}
+.adjacent h3+p{background:#d8f5e9;outline:2px solid #269c73}
+.general h3~p{background:#d8f5e9;outline:2px solid #269c73}
+.note{background:#fff0e7;padding:8px;border-radius:4px}
+pre{background:#17283d;color:#e8f2f7;padding:14px;border-radius:7px;overflow:auto}
+table{border-collapse:collapse;width:100%;text-align:left}
+th,td{padding:10px;border-bottom:1px solid #e1e8ef}
+th{background:#edf3f7;color:#173e58}
+.table-wrap{overflow-x:auto}
+footer{text-align:center;background:#14243b;color:#dce9ef;padding:20px}
+@media(max-width:600px){.panel{padding:16px}header{padding:42px 16px}th,td{font-size:14px;padding:8px}}
